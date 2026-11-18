@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_shadow_end_color"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cardview_light_background"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tvTle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="บันทึกค่าใช้จ่ายประจำวัน"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="จดทุกวันบันทึกค่าใช้วันนี้ให้ครบเลยนะ"
+                android:textSize="14dp"
+                android:textColor="#FFFFCC"
+                android:layout_marginBottom="16dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="โปรดใส่จำนวนเงิน (เป็นบาท)"
+                android:textColor="#555555"
+                android:textSize="14sp"/>
+            <EditText
+                android:id="@+id/etAmount"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#FCC6BB"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:inputType="numberDecimal"
+                android:hint="เช่น 100 หรือ 10.25"
+                android:textColor="#333333"
+                android:textColorHint="#AAAAAA"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="คำอธิบาย"
+                android:textColor="#555555"
+                android:textSize="14sp"/>
+
+            <EditText
+                android:id="@+id/etNote"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+
+                android:background="#FCC6BB"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:inputType="text"
+                android:hint="เช่น ข้าวกลางวัน, ค่าเดินทาง"
+                android:textColor="#333333"
+                android:textColorHint="#AAAAAA"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btnClear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="เคลียร์"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#FFB6C1"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="เพิ่มรายการ"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#FFB6C1"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:backgroundTint="#FFE3E3"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"/>
+
+
+
+        <TextView
+            android:id="@+id/tvLastItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="รายการล่าสุด : -"
+            android:textColor="#555555"
+            android:textSize="14sp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tvtotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ยอดรวมวันนี้ : -"
+            android:textColor="#555555"
+            android:textSize="14sp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
